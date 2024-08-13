@@ -41,7 +41,7 @@ jobs:
         accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
         apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
         projectName: resonite-jp-guide
-        directory: book
+        directory: ./resonite-tutorial/book
         gitHubToken: ${{ secrets.GITHUB_TOKEN }}
 
     - name: Add publish URL as commit status
