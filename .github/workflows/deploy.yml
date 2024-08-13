@@ -4,8 +4,8 @@ on:
   push:
     branches: [ "master" ]
     paths:
-      - "src/**"
-      - "book.toml"
+      - "resonite-tutorial/src/**"
+      - "resonite-tutorial/book.toml"
 jobs:
   build:
 
