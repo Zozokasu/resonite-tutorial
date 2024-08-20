@@ -2,7 +2,6 @@ name: deploy
 
 on:
   push:
-    branches: [ "master" ]
     paths:
       - "resonite-tutorial/src/**"
       - "resonite-tutorial/book.toml"
