@@ -15,6 +15,7 @@
   - [アイテムへの操作](BasicControls/interactItems.md)
   - [レーザーを操作する](BasicControls/laser.md)
   - [デスクトップモード](BasicControls/desktopMode.md)
+  - [VRホットスイッチ](BasicControls/hotSwitch.md)
 - [フレンド](contacts/contacts.md)
   - [フレンドになる](contacts/addContact.md)
   - [フレンドの場所に行く](contacts/joinToFrends.md)
