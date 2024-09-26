@@ -4,3 +4,6 @@ language = "jp"
 multilingual = false
 src = "src"
 title = "Resonite 日本語 チュートリアル"
+[output.html]
+additional-js = ["assets/fzf.umd.js", "assets/elasticlunr.js", "theme/custom.js"]
+additional-css = ["theme/custom.css"]
