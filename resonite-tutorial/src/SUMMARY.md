@@ -41,7 +41,7 @@
   - [セッションのホスト](session/sessionHost.md)
   - [セッションを閉じる](session/closeSession.md)
   - [入室制限を設定する](session/accessLevel.md)
-  - [セッションを保全する](session/manageSession.md)
+  - [セッションの細かい設定](session/manageSession.md)
   - [ユーザーの管理方法](session/userControl.md)
   - [権限の管理方法](session/permission.md)
 - [カメラ](camera/camera.md)
