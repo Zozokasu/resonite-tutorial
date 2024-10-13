@@ -1,9 +1,9 @@
 [book]
-authors = ["ぞぞかす"]
+authors = ["ぞぞかす","くろん"]
 language = "jp"
 multilingual = false
 src = "src"
-title = "Resonite 日本語 チュートリアル"
+title = "Resonite 非公式日本語ガイドブック"
 [output.html]
 additional-js = ["assets/fzf.umd.js", "assets/elasticlunr.js", "theme/custom.js"]
 additional-css = ["theme/custom.css"]
