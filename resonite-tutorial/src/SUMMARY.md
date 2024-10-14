@@ -1,7 +1,7 @@
 # Summary
 - [トップページ](./index.md)
-- [はじめに](introduction/miscellaneous.md)
-  - [Resoniteの始め方](introduction/installation.md)
+- [はじめに](introduction/introduction.md)
+  - [Resoniteの始め方](introduction/howToStart.md)
   - [Resoniteのあれこれ](introduction/resoDetail.md)
   - [日本人を探す](introduction/findJapanese.md)
   - [他のVRSNSを既にプレイした方へ](introduction/forOtherPlatformUser.md)
