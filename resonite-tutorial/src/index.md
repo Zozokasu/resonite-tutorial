@@ -1,4 +1,8 @@
 # Resonite非公式日本語ガイドブック
+
+## このサイトは工事中です！！！！！！
+
+
 このサイトは有志が作ったResoniteのチュートリアルサイトです。
 
 Resonite日本語ガイドワールド[^guideWorld] とほとんど同じ内容が書かれています。
@@ -13,3 +17,6 @@ ResoniteはよくVRChat等と並んでVRSNSの一つとして紹介されたり�
 しかし、それなりのスペックのPC（いわゆるゲーミングPC）が必要です[^requiredSpec]。
 
 [^requiredSpec]: ResoniteのSteamストアページでは最低スペック要件が「GTX 750以上」「デュアルコアCPU以上」と書かれていますが、**実際はもっと高いスペックが必要です！**<br/>本当の最低要件としてはGPUはGTX 1060以上（ギリギリ会話とかができる）、できればRTX 2060 以上のもの、CPUはintelで言うところの第11世代ごろのCore i5以上くらいのものが必要な感じがします。
+## このサイトについて
+[ぞぞかす](https://zozoka.su/)が制作・管理するResonite非公式日本語ガイドブックです。
+誤植・誤り、内容の変更の要望があれば直接連絡するか、GitHubで[issue](https://github.com/Zozokasu/resonite-tutorial/issues)を立ててください。
