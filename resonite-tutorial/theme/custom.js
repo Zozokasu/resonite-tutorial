@@ -1,9 +1,9 @@
 (function () {
-    var h2 = document.querySelectorAll("h2");
+    var h2 = document.querySelectorAll('h2')
     var newList = document.createElement('ul');
     newList.setAttribute('class', 'innerLink');
-    h2.forEach(function (item) {
-        var a = item.firstElementChild;
+    for (var i = 0, l = h2.length; i < l; i += 1) {
+        var a = h2[i].firstElementChild;
         var label = a.innerText;
         var href = a.getAttribute('href');
         var newAnchor = document.createElement('a');
@@ -11,7 +11,7 @@
         newAnchor.innerHTML = label;
         var newItem = document.createElement('li');
         newItem.appendChild(newAnchor);
-        newList.appendChild
-    });
+        newList.appendChild(newItem);
+    }
     document.querySelector('.sidebar .active').appendChild(newList);
 })();
