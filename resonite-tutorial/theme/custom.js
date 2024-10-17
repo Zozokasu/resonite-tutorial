@@ -10,6 +10,7 @@
         newAnchor.setAttribute('href', href);
         newAnchor.innerHTML = label;
         var newItem = document.createElement('li');
+        newItem.className = 'chapter-item expanded';
         newItem.appendChild(newAnchor);
         newList.appendChild(newItem);
     }

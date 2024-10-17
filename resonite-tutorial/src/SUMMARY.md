@@ -24,6 +24,7 @@
   - [アイテムを出す](inventory/spawnItems.md)
   - [危ないアイテムについて](inventory/guidelines.md)
   - [フォルダ](inventory/folder.md)
+  - [Resonite Essentialsフォルダ](inventory/resoniteEssentials.md)
 - [アバター](avatar/avatar.md)
   - [アバターを着る](avatar/equipAvatar.md)
   - [アバターの抜け殻](avatar/avatarGhost.md)
