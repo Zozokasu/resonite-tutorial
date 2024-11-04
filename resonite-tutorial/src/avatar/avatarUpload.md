@@ -5,4 +5,4 @@ ResonitePackage形式などで配布されているResonite対応アバターで
 2. 出てきたアバターをインベントリに保存
 3. 必要なら既定のアバターに設定
 ## その他のアバターの場合
-VRChat対応アバターや、オリジナルのアバターは特殊な手順を必要とします。詳しくは[カスタマイズ](Costamize/avatarUpload.md)にて。
+VRChat対応アバターや、オリジナルのアバターは特殊な手順を必要とします。詳しくは[カスタマイズ](../customize/avatarUpload.md#その他vrchat対応など)にて。

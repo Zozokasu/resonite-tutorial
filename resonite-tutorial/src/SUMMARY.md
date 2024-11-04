@@ -36,7 +36,7 @@
   - [ブロック](safety/blocking.md)
   - [外部へのアクセス](safety/hostAccess.md)
 - [ワールド](worlds/worlds.md)
-  - [ワールを探す](worlds/findWorld.md)
+  - [ワールドを探す](worlds/findWorld.md)
   - [ワールドを開く](worlds/openWorld.md)
 - [セッション](session/session.md)
   - [セッションのホスト](session/sessionHost.md)
