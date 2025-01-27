@@ -42,6 +42,7 @@ canvas.height = window.innerHeight;
 const vertexShaderSource = `
     attribute vec2 a_position;
     attribute float a_pointSize;
+    attribute vec4 a_color;
     uniform vec2 u_resolution;
     uniform vec2 u_mouse;
     uniform float u_time;
@@ -56,9 +57,14 @@ const vertexShaderSource = `
         gl_Position = vec4(clipSpace * vec2(1, -1), 0, 1);
         gl_PointSize = a_pointSize;
 
-        // パーティクルの色をマウスとの距離に応じて変化
-        float dist = distance(a_position, u_mouse);
-        v_color = vec4(1.0 - dist / u_resolution.x, 0.5, dist / u_resolution.x, 1.0);
+        // // パーティクルの色をマウスとの距離に応じて変化
+        // float dist = distance(a_position, u_mouse);
+        
+        // パーティクルの色をランダムに設定
+        
+        
+        //v_color = vec4(1.0 - dist / u_resolution.x, 0.5, dist / u_resolution.x, 1.0);
+        v_color = a_color;
     }
 `;
 
@@ -119,15 +125,25 @@ gl.enable(gl.BLEND);
 gl.blendFunc(gl.SRC_ALPHA, gl.ONE_MINUS_SRC_ALPHA);
 
 // パーティクルの数
-const numParticles = 500;
+const numParticles = 30;
 
 // パーティクルの初期位置とサイズをランダムに生成
 const positions = new Float32Array(numParticles * 2);
 const sizes = new Float32Array(numParticles);
+const colors = new Float32Array(numParticles * 4);
+const angles = new Float32Array(numParticles);
+const radius = new Float32Array(numParticles);
+const center = new Float32Array(numParticles * 2);
+const centerWeight = new Float32Array(numParticles);
 for (let i = 0; i < numParticles; i++) {
     positions[2 * i] = Math.random() * window.innerWidth;
     positions[2 * i + 1] = Math.random() * window.innerHeight;
-    sizes[i] = Math.random() * 5 + 5;
+    center[2 * i] = window.innerWidth / 2;
+    center[2 * i + 1] = window.innerHeight / 2;
+    centerWeight[i] = Math.random() * 0.5 + 0.5;
+    sizes[i] = Math.random() * 1.5 + 3.5;
+    angles[i] = Math.random() * Math.PI * 2;
+    radius[i] = Math.random() * 100 + 25;
 }
 
 // バッファの作成
@@ -139,9 +155,14 @@ const sizeBuffer = gl.createBuffer();
 gl.bindBuffer(gl.ARRAY_BUFFER, sizeBuffer);
 gl.bufferData(gl.ARRAY_BUFFER, sizes, gl.STATIC_DRAW);
 
+const colorBuffer = gl.createBuffer();
+gl.bindBuffer(gl.ARRAY_BUFFER, colorBuffer);
+gl.bufferData(gl.ARRAY_BUFFER, colors, gl.STATIC_DRAW);
+
 // 属性ロケーションの取得
 const positionLocation = gl.getAttribLocation(program, 'a_position');
 const pointSizeLocation = gl.getAttribLocation(program, 'a_pointSize');
+const pointColorLocation = gl.getAttribLocation(program, 'a_color');
 
 // ユニフォームロケーションの取得
 const resolutionLocation = gl.getUniformLocation(program, 'u_resolution');
@@ -162,9 +183,9 @@ window.addEventListener('mousemove', (event) => {
 function resizeCanvas() {
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
-    gl.viewport(0, 0, gl.drawingBufferWidth, gl.drawingBufferHeight);
+    //gl.viewport(0, 0, gl.drawingBufferWidth, gl.drawingBufferHeight);
+    console.log(window.innerWidth.toString() + " " + window.innerHeight.toString());
 }
-window.addEventListener('resize', resizeCanvas);
 resizeCanvas();
 
 // プログラムの使用開始
@@ -179,6 +200,9 @@ gl.enableVertexAttribArray(pointSizeLocation);
 gl.bindBuffer(gl.ARRAY_BUFFER, sizeBuffer);
 gl.vertexAttribPointer(pointSizeLocation, 1, gl.FLOAT, false, 0, 0);
 
+gl.enableVertexAttribArray(pointColorLocation);
+gl.bindBuffer(gl.ARRAY_BUFFER, colorBuffer);
+gl.vertexAttribPointer(pointColorLocation, 4, gl.FLOAT, false, 0, 0);
 // ユニフォームの設定
 gl.uniform2f(resolutionLocation, canvas.width, canvas.height);
 
@@ -197,17 +221,31 @@ function render(now) {
         let y = positions[2 * i + 1];
 
         // マウスへのベクトル
-        let dx = (x - mouseX) * 0.002 * sizes[i];
-        let dy = (y - mouseY) * 0.002 * sizes[i];
+        let dx = (mouseX - center[2 * i])
+        let dy = (mouseY - center[2 * i + 1])
 
         // 距離と速度の計算
         //let dist = Math.sqrt(dx * dx + dy * dy);
         //let speed = 100 / (dist + 1000); // 距離に応じた速度調整
 
         // 位置の更新
-        let sqrMag = (dx * dx + dy * dy);
-        x += ((dx - dy) * 0.5 - dx * sqrMag) * deltaTime * 500;
-        y += ((dx + dy) * 0.5 - dy * sqrMag) * deltaTime * 500;
+
+        // 軸を引き寄せる
+        center[2 * i] += dx * 0.05 * centerWeight[i];
+        center[2 * i + 1] += dy * 0.05 * centerWeight[i];
+
+        // カーソルの周りを円運動させる
+        let angularSpeeds = 100 / radius[i]
+        angles[i] += angularSpeeds * deltaTime;
+        x = center[2 * i] + Math.cos(angles[i]) * radius[i];
+        y = center[2 * i + 1] + Math.sin(angles[i]) * radius[i];
+
+
+
+        // let sqrMag = (dx * dx + dy * dy);
+        // x += ((dx - dy) * 0.5 - dx * sqrMag) * deltaTime * 500;
+        // y += ((dx + dy) * 0.5 - dy * sqrMag) * deltaTime * 500;
+
 
         // 画面外に出た場合は再配置
         // if (x < 0 || x > canvas.width || y < 0 || y > canvas.height) {
@@ -236,5 +274,25 @@ function render(now) {
     requestAnimationFrame(render);
 }
 
+// 色の初期化
+// 5色の間でランダムに色を選択
+const color0 = [0.19, 0.92, 0.20] // green
+const color1 = [0.38, 0.82, 0.98] // blue
+const color2 = [0.67, 0.25, 0.95] // purple
+const color3 = [1.00, 0.31, 0.31] // red
+const color4 = [0.97, 0.97, 0.22] // yellow
+const colorList = [color0, color1, color2, color3, color4]
+for (let i = 0; i < numParticles * 4; i += 4) {
+    let colorindex = Math.floor(Math.random() * 5)
+    let color = colorList[colorindex]
+    colors[i] = color[0];
+    colors[i + 1] = color[1];
+    colors[i + 2] = color[2];
+    colors[i + 3] = 1.0;
+}
+gl.bindBuffer(gl.ARRAY_BUFFER, colorBuffer);
+gl.bufferData(gl.ARRAY_BUFFER, colors, gl.STATIC_DRAW);
+
 console.log("hi");
+window.addEventListener('resize', resizeCanvas);
 requestAnimationFrame(render);
