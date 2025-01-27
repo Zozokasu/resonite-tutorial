@@ -5,3 +5,12 @@
     margin-bottom: 0.5em;
 }
 
+#stalker {
+    pointer-events: none;
+    position: fixed;
+    left:0;
+    top:0;
+    right:0;
+    bottom:0;
+    z-index: 999;
+}
