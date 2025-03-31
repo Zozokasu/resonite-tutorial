@@ -39,6 +39,7 @@ jobs:
         mdbook build
     - name: Build sitemap
       run:
+        echo $PWD
         mdbook-utils sitemap -b https://resonite-jp-guide.zozoka.su/ -y
         
     - name: Publish to Cloudflare Pages
