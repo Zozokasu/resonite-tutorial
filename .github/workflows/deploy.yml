@@ -37,7 +37,9 @@ jobs:
         # Just add a `cd` here if you need to change to another directory.
         cd resonite-tutorial
         mdbook build
-        mdbook-utils sitemap -b https://resonite-jp-guide.zozoka.su/
+    - name: Build sitemap
+      run:
+        mdbook-utils sitemap -b https://resonite-jp-guide.zozoka.su/ -y
         
     - name: Publish to Cloudflare Pages
       id: resonite_jp_guide
