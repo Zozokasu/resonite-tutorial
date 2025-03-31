@@ -43,8 +43,9 @@ jobs:
         cd resonite-tutorial
         mdbook build
     - name: Build sitemap
-      run:
-        echo $PWD | mdbook-utils sitemap -b https://resonite-jp-guide.zozoka.su/ -y
+      run: |
+        cd resonite-tutorial
+        mdbook-utils sitemap -b https://resonite-jp-guide.zozoka.su/ -y
         
     - name: Publish to Cloudflare Pages
       id: resonite_jp_guide
