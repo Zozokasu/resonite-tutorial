@@ -28,7 +28,7 @@ jobs:
 
     - name: Install latest mdbook-utils
       run:
-        cargo install --git https://github.com/john-cd/mdbook-utils
+        cargo install --git https://github.com/john-cd/mdbook-utils dependencies
         
     - name: Build Book
       run: |
