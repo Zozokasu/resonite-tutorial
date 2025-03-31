@@ -1,6 +1,6 @@
 # Resoniteの始め方
 ## インストール
-Steamからインストールしましょう。今のところSteam以外からのインストールはできません。
+Steamからインストールしましょう。今のところSteam以外で配布されていません。
 - <https://store.steampowered.com/app/2519830/Resonite/?l=japanese>
   - ResoniteのSteamストアページ 
 
