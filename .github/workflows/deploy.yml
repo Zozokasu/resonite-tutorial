@@ -30,7 +30,12 @@ jobs:
     - name: Install latest mdbook-utils
       run:
         cargo install --git https://github.com/john-cd/mdbook-utils dependencies | echo "$HOME/.cargo/bin" >> $GITHUB_PATH
-        
+    - name: List Cargo bin directory
+      run: ls -la $HOME/.cargo/bin
+
+    - name: Check PATH
+      run: echo $PATH
+
     - name: Build Book
       run: |
         # This assumes your book is in the root of your repository.
