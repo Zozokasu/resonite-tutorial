@@ -5,6 +5,7 @@ on:
     paths:
       - "resonite-tutorial/src/**"
       - "resonite-tutorial/book.toml"
+      - ".github/workflows/deploy.yml"
 jobs:
   build:
 
