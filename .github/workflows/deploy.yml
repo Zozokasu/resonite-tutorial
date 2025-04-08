@@ -42,11 +42,17 @@ jobs:
         # Just add a `cd` here if you need to change to another directory.
         cd resonite-tutorial
         mdbook build
+
     - name: Build sitemap
       run: |
         cd resonite-tutorial
         mdbook-utils sitemap -b https://resonite-jp-guide.zozoka.su/ -y
-        
+
+    - name: Delete .html from sitemap
+      run: |
+        cd resonite-tutorial/book
+        sed -Ei 's/(<loc>[^<]+)\.html(<\/loc>)/\1\2/g' sitemap.xml
+
     - name: Publish to Cloudflare Pages
       id: resonite_jp_guide
       uses: cloudflare/pages-action@1
