@@ -1,21 +1,33 @@
-(function () {
-    var h2 = document.querySelectorAll('h2')
-    var newList = document.createElement('ul');
-    newList.setAttribute('class', 'innerLink');
-    for (var i = 0, l = h2.length; i < l; i += 1) {
-        var a = h2[i].firstElementChild;
-        var label = a.innerText;
-        var href = a.getAttribute('href');
-        var newAnchor = document.createElement('a');
-        newAnchor.setAttribute('href', href);
-        newAnchor.innerHTML = label;
-        var newItem = document.createElement('li');
-        newItem.className = 'chapter-item expanded';
-        newItem.appendChild(newAnchor);
-        newList.appendChild(newItem);
-    }
-    document.querySelector('.sidebar .active').appendChild(newList);
-})();
+// (function () {
+//     var h2 = document.querySelectorAll('h2')
+//     var newList = document.createElement('ul');
+//     newList.setAttribute('class', 'innerLink');
+//     for (var i = 0, l = h2.length; i < l; i += 1) {
+//         var a = h2[i].firstElementChild;
+//         var label = a.innerText;
+//         var href = a.getAttribute('href');
+//         var newAnchor = document.createElement('a');
+//         newAnchor.setAttribute('href', href);
+//         newAnchor.innerHTML = label;
+//         var newItem = document.createElement('li');
+//         newItem.className = 'chapter-item expanded';
+//         newItem.appendChild(newAnchor);
+//         newList.appendChild(newItem);
+//     }
+//     let active = document.querySelector('.sidebar .active');
+//     let currentPath = window.location.pathname;
+//     let activePath = Array.from(document.querySelector('.sidebar')).filter((a =>{
+//         try {
+//             return new URL(a.href).pathname === currentPath;
+//         } catch (e) {
+//             return false;
+//         }
+//     }))
+//     console.log(activePath);
+//     if (active) {
+//         active.appendChild(newList);
+//     }
+// })();
 
 (function () {
     //マウスストーカー用のdivタグを作成
@@ -91,7 +103,7 @@ function createShader(gl, type, source) {
     if (success) {
         return shader;
     }
-    console.log(gl.getShaderInfoLog(shader));
+    //console.log(gl.getShaderInfoLog(shader));
     gl.deleteShader(shader);
 }
 
@@ -105,7 +117,7 @@ function createProgram(gl, vertexShader, fragmentShader) {
     if (success) {
         return program;
     }
-    console.log(gl.getProgramInfoLog(program));
+    //console.log(gl.getProgramInfoLog(program));
     gl.deleteProgram(program);
 }
 
@@ -184,7 +196,7 @@ function resizeCanvas() {
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
     //gl.viewport(0, 0, gl.drawingBufferWidth, gl.drawingBufferHeight);
-    console.log(window.innerWidth.toString() + " " + window.innerHeight.toString());
+    //console.log(window.innerWidth.toString() + " " + window.innerHeight.toString());
 }
 resizeCanvas();
 
