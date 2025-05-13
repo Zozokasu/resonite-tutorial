@@ -14,6 +14,16 @@
 2. インベントリに保存してください。
    - アイテムと同じように掴んで保存できるほか、「現在着ているアバターを保存」ボタンからも保存できます。
 
+## Modular Avatarを利用してセットアップされたVRChatアバター
+<https://modular-avatar.nadena.dev/dev/ja/docs/experimental-features/resonite-support>
+
+Modular Avatarの、VRChatアバターを`resonitepackage`形式としてエクスポートする機能（実験的な機能）を使うことで簡単にアバターをインポートできます。
+
+<div class="warning">
+現在、ModularAvatarのresonitepackageエクスポート機能は実験的な機能として提供されているため、バグがあったりする可能性があります。
+</div>
+
+
 ## その他（VRChat対応アバターなど）
 大多数のアバターはこっちです。結構たいへんです。
 - ハードルが高いと感じた方は、[Resonite Japan](https://discord.gg/resonite-japan) （Resonite日本ユーザーのDiscord）で頼んでみるのがいいかもしれません。Resonite内の複雑な作業を代行してもらえます。
