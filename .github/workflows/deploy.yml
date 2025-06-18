@@ -30,6 +30,11 @@ jobs:
     - name: Install latest mdbook-utils
       run:
         cargo install --git https://github.com/john-cd/mdbook-utils mdbook-utils | echo "$HOME/.cargo/bin" >> $GITHUB_PATH
+
+    - name: Install latest mdbook-callouts
+      run:
+        cargo install --git https://github.com/GrayJack/rs-mdbook-callouts mdbook-callouts
+
     - name: List Cargo bin directory
       run: ls -la $HOME/.cargo/bin
 

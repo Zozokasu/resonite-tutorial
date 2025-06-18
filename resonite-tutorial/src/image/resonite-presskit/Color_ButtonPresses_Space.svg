@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+  <defs>
+    <style>
+      .cls-1 {
+        letter-spacing: 0em;
+      }
+
+      .cls-2 {
+        letter-spacing: 0em;
+      }
+
+      .cls-3, .cls-4 {
+        fill: #ba64f2;
+      }
+
+      .cls-5 {
+        letter-spacing: 0em;
+      }
+
+      .cls-6 {
+        letter-spacing: 0em;
+      }
+
+      .cls-4 {
+        font-family: Poppins-SemiBold, Poppins;
+        font-size: 16.88px;
+        font-weight: 600;
+      }
+    </style>
+  </defs>
+  <text class="cls-4" transform="translate(37.84 70.2)"><tspan class="cls-2" x="0" y="0">s</tspan><tspan class="cls-1" x="9.11" y="0">p</tspan><tspan class="cls-5" x="20.59" y="0">a</tspan><tspan class="cls-6" x="32.01" y="0">c</tspan><tspan x="42.09" y="0">e</tspan></text>
+  <path class="cls-3" d="M118.22,80.55H9.78c-2.05,0-3.72-1.67-3.72-3.72v-25.67c0-2.05,1.67-3.72,3.72-3.72h108.44c2.05,0,3.72,1.67,3.72,3.72v25.67c0,2.05-1.67,3.72-3.72,3.72ZM8.82,43.31c-3.81,0-6.9,3.09-6.9,6.9v27.59c0,3.81,3.09,6.9,6.9,6.9h110.36c3.81,0,6.9-3.09,6.9-6.9v-27.59c0-3.81-3.09-6.9-6.9-6.9H8.82Z"/>
+</svg>

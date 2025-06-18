@@ -5,6 +5,7 @@
   - [Resoniteのあれこれ](introduction/resoDetail.md)
   - [日本人を探す](introduction/findJapanese.md)
   - [他のVRSNSを既にプレイした方へ](introduction/forOtherPlatformUser.md)
+  - [一問一答 よくある質問](introduction/faq.md)
 - [基本操作](BasicControls/BasicControl.md)
   - [ボタンの名称](BasicControls/1-fourButtons.md)
   - [移動方法](BasicControls/moving.md)

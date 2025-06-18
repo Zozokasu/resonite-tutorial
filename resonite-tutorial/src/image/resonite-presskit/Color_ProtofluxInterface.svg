@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+  <defs>
+    <style>
+      .cls-1 {
+        letter-spacing: -.05em;
+      }
+
+      .cls-2, .cls-3 {
+        fill: #231f20;
+      }
+
+      .cls-4 {
+        letter-spacing: 0em;
+      }
+
+      .cls-5 {
+        letter-spacing: 0em;
+      }
+
+      .cls-3 {
+        font-family: VIVITA-Medium, VIVITA;
+        font-size: 23.6px;
+        font-weight: 500;
+      }
+
+      .cls-6 {
+        fill: #ed1c24;
+      }
+
+      .cls-7 {
+        letter-spacing: 0em;
+      }
+    </style>
+  </defs>
+  <rect class="cls-2" width="128" height="128"/>
+  <rect class="cls-6" x="-21.7" y="-19.97" width="174.53" height="174.53"/>
+  <text class="cls-3" transform="translate(8.7 74.47)"><tspan class="cls-7" x="0" y="0">R</tspan><tspan class="cls-4" x="15.44" y="0">E</tspan><tspan class="cls-7" x="29.44" y="0">M</tspan><tspan class="cls-1" x="49.13" y="0">O</tspan><tspan class="cls-5" x="67.7" y="0">V</tspan><tspan class="cls-4" x="83.89" y="0">E</tspan><tspan x="97.88" y="0">D</tspan></text>
+</svg>
