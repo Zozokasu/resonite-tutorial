@@ -13,7 +13,7 @@ Resonite日本語ガイドワールド[^guideWorld] とほとんど同じ内容�
 ## Resoniteって何？
 3D空間でいろんな人とおしゃべりしたり、あそんだり、何かを作ったりできるアプリです。
 
-ResoniteはよくVRChat等と並んでVRSNSの一つとして紹介されたりしますが、VRChatと同様、**VRゴーグルがなくても遊べます！**
+ResoniteはよくVRChat等と並んでVRSNSの一つとして紹介されたりしますが、**VRゴーグルがなくても遊べます！**
 
 しかし、それなりのスペックのPC（いわゆるゲーミングPC）が必要です[^requiredSpec]。
 
