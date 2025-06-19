@@ -261,7 +261,8 @@ ResoniteやVRChatなどのVRSNSではユーザーの見た目を、一般に**�
 
 アイコン設定手順に、言葉ではとても説明しづらいResonite特有のフィジカルな操作が登場するため、操作方法は以下の動画を見てください。
 
-https://www.youtube.com/watch?v=9DVTYrdFZXs
+<iframe width="600" height="400" src="https://www.youtube.com/embed/9DVTYrdFZXs" title="【解説】Resoniteでのアイコン設定方法【Resonite】" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
 ## マイクミュート・音量調整
 <img class="right" height="150px" src="../image/resonite-presskit/Color_Mute.svg" alt="Mute Icon">
 
