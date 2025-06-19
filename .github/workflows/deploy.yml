@@ -6,6 +6,7 @@ on:
       - "resonite-tutorial/src/**"
       - "resonite-tutorial/book.toml"
       - ".github/workflows/deploy.yml"
+      - "resonite-tutorial/theme/**"
 jobs:
   build:
 
