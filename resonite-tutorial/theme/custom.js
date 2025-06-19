@@ -305,6 +305,5 @@ for (let i = 0; i < numParticles * 4; i += 4) {
 gl.bindBuffer(gl.ARRAY_BUFFER, colorBuffer);
 gl.bufferData(gl.ARRAY_BUFFER, colors, gl.STATIC_DRAW);
 
-console.log("hi");
 window.addEventListener('resize', resizeCanvas);
 requestAnimationFrame(render);
