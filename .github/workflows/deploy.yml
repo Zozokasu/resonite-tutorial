@@ -52,7 +52,7 @@ jobs:
     - name: Build sitemap
       run: |
         cd resonite-tutorial
-        mdbook-utils sitemap -b https://resonite-jp-guide.zozoka.su/ -y
+        mdbook-utils sitemap -b https://resonite-jp-guide.zokasu.net/ -y
 
     - name: Delete .html from sitemap
       run: |
